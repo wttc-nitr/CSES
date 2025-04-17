@@ -1,0 +1,24 @@
+# [1] FIRST ignore ALL files recursively (reset scope)
+*
+
+# [2] THEN whitelist files WITH extensions (at any depth)
+!**/*.*
+!**/.*       # Keep dotfiles (like .gitignore)
+
+# [3] MUST allow directory traversal
+!**/
+
+# [4] Explicit ignores (overrides whitelist where needed)
+*.cpp:tests
+*.o
+*.a
+*.out
+*.exe
+*.bin
+
+# [5] IDE/temp files
+*.swp
+*.swo
+.DS_Store
+.vscode/
+.idea/
